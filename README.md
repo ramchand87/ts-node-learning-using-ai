@@ -26,7 +26,8 @@ This repository serves as a learning playground for mastering Node.js, TypeScrip
 
 The project is organized into `src` containing various learning modules:
 
-*   `src/models`: Basic class definitions (JS & TS).
+*   `src/node_class_demo`: Basic Node.js class & module demo (CommonJS).
+*   `src/ts_class_demo`: Basic TypeScript class & module demo.
 *   `src/async_await_demo`: Asynchronous programming examples.
 *   `src/event_demo`: Node.js Event Emitter patterns.
 
@@ -38,10 +39,19 @@ Follow these modules to understand the progression of concepts in this workspace
 Understand how classes and modules work in both standard Node.js (CommonJS) and TypeScript.
 
 *   **Key Files**:
-    *   [`src/models/Person.js`](src/models/Person.js): A simple class definition using `module.exports`.
-    *   [`src/models/Person.ts`](src/models/Person.ts): A strongly-typed class definition.
-    *   [`src/index.js`](src/index.js): Entry point for JS examples.
-    *   [`src/index.ts`](src/index.ts): Entry point for TS examples.
+    *   [`src/node_class_demo/Person.js`](src/node_class_demo/Person.js): A simple class definition using `module.exports`.
+    *   [`src/node_class_demo/index.js`](src/node_class_demo/index.js): Importing and using the class.
+    *   [`src/ts_class_demo/Person.ts`](src/ts_class_demo/Person.ts): A strongly-typed class definition.
+    *   [`src/ts_class_demo/index.ts`](src/ts_class_demo/index.ts): Using the class with type checking.
+
+*   **How to Run**:
+    ```bash
+    # Run Node.js demo
+    node src/node_class_demo/index.js
+
+    # Run TypeScript demo
+    npx ts-node src/ts_class_demo/index.ts
+    ```
 
 ### Step 2: Async/Await & Promises
 Learn how to handle asynchronous operations, promises, and the async/await syntax.
