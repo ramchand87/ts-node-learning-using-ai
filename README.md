@@ -4,8 +4,6 @@ This repository serves as a learning playground for mastering Node.js, TypeScrip
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed on your machine:
-
 *   [Node.js](https://nodejs.org/) (v14 or higher recommended)
 *   [npm](https://www.npmjs.com/) (usually comes with Node.js)
 
@@ -24,29 +22,54 @@ Before you begin, ensure you have the following installed on your machine:
     npm install
     ```
 
-## Usage
+## Step-by-Step Learning Guide
 
-To compile the TypeScript code and run the main application:
+Follow these modules to understand the progression of concepts in this workspace.
 
-```bash
-npm start
-```
+### Step 1: Node.js Basics (Classes & Modules)
+Understand how classes and modules work in standard Node.js (CommonJS).
 
-This command uses `tsc` to build the project and `node` to execute the output in `dist/index.js`.
+*   **Key Files**:
+    *   [`node_class_demo/Person.js`](node_class_demo/Person.js): A simple class definition using `module.exports`.
+    *   [`node_class_demo/index.js`](node_class_demo/index.js): Importing and using the class.
+*   **How to Run**:
+    ```bash
+    node node_class_demo/index.js
+    ```
 
-To run the **Async/Await Demo**:
-```bash
-npm run start:async
-```
+### Step 2: TypeScript Fundamentals
+Learn how to use TypeScript for type safety and modern class syntax.
 
-### Exploring Demos
+*   **Key Files**:
+    *   [`ts_class_demo/Person.ts`](ts_class_demo/Person.ts): A strongly-typed class.
+    *   [`ts_class_demo/index.ts`](ts_class_demo/index.ts): Using the class with type checking.
+*   **How to Run**:
+    ```bash
+    # Requires compiling first, or running with ts-node (if installed)
+    tsc && node ts_class_demo/dist/index.js
+    ```
 
-The workspace is organized into different sections:
+### Step 3: Async/Await & Promises
+Master asynchronous programming to handle operations like file I/O and API calls efficiently.
 
-*   **`src/`**: Main source code for the workspace.
-    *   **`src/async_await_demo/`**: Examples of Asynchronous programming using Promises and Async/Await.
-*   **`ts_class_demo/`**: Demonstrations specifically focused on TypeScript classes and object-oriented programming concepts.
-*   **`node_class_demo/`**: Examples of Node.js specific class implementations and module patterns.
+*   **Key Files**:
+    *   [`src/async_await_demo/index.ts`](src/async_await_demo/index.ts): Demonstrates `Promise`, `async/await`, sequential vs parallel execution, and file I/O.
+    *   [`learnings.md`](learnings.md): Detailed notes on concepts like `Promise<void>` and the `main()` function.
+*   **How to Run**:
+    ```bash
+    npm run start:async
+    ```
+
+### Step 4: Main Application Structure
+See how a TypeScript project is structured with a `src` folder and build process.
+
+*   **Key Files**:
+    *   [`src/index.ts`](src/index.ts): The entry point for the main application.
+    *   [`tsconfig.json`](tsconfig.json): Configuration for the TypeScript compiler.
+*   **How to Run**:
+    ```bash
+    npm start
+    ```
 
 ## Project Structure
 
@@ -55,6 +78,7 @@ AI_Workspace/
 ├── dist/               # Compiled JavaScript files
 ├── node_class_demo/    # Node.js class examples
 ├── src/                # Main application source
+│   └── async_await_demo/ # Async/Await examples
 ├── ts_class_demo/      # TypeScript class examples
 ├── package.json        # Project dependencies and scripts
 ├── tsconfig.json       # TypeScript configuration
