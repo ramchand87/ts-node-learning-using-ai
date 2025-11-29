@@ -82,6 +82,18 @@ Explore the Node.js `events` module to build event-driven architectures.
     npm run start:events
     ```
 
+### Step 5: Unit Testing (Jest)
+Learn how to write unit tests using Jest, covering mocks, spies, and async testing.
+
+*   **Documentation**: [README](src/unittest_demo/README.md)
+*   **Key Files**:
+    *   [`src/unittest_demo/Calculator.spec.ts`](src/unittest_demo/Calculator.spec.ts)
+    *   [`src/unittest_demo/UserService.spec.ts`](src/unittest_demo/UserService.spec.ts)
+*   **How to Run**:
+    ```bash
+    npm test
+    ```
+
 ## Future Learning Goals
 
 *   Understand Node.js runtime and event loop.
