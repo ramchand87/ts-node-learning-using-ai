@@ -1,0 +1,47 @@
+@startuml
+title TicketManager Event Flow
+
+actor User
+participant "index.ts" as Main
+participant "TicketManager" as TM
+participant "EventListener" as Listener
+
+User -> Main: Run Script
+Main -> TM: new TicketManager(2)
+Main -> TM: on('buy', callback)
+Main -> TM: on('error', callback)
+
+note right of Main: Buying Ticket 1
+Main -> TM: buy('alice@example.com', 20)
+activate TM
+TM -> TM: Decrement Supply (2 -> 1)
+TM -> Listener: emit('buy', 'alice...', 20)
+activate Listener
+Listener -> Listener: Log "EMAIL SENT"
+deactivate Listener
+TM -> Main: return
+deactivate TM
+
+note right of Main: Buying Ticket 2
+Main -> TM: buy('bob@example.com', 20)
+activate TM
+TM -> TM: Decrement Supply (1 -> 0)
+TM -> Listener: emit('buy', 'bob...', 20)
+activate Listener
+Listener -> Listener: Log "EMAIL SENT"
+deactivate Listener
+TM -> Main: return
+deactivate TM
+
+note right of Main: Buying Ticket 3 (Fail)
+Main -> TM: buy('charlie@example.com', 20)
+activate TM
+TM -> TM: Check Supply (0)
+TM -> Listener: emit('error', Error)
+activate Listener
+Listener -> Listener: Log "ERROR: No tickets"
+deactivate Listener
+TM -> Main: return
+deactivate TM
+
+@enduml

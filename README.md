@@ -22,71 +22,49 @@ This repository serves as a learning playground for mastering Node.js, TypeScrip
     npm install
     ```
 
+## Project Structure
+
+The project is organized into `src` containing various learning modules:
+
+*   `src/models`: Basic class definitions (JS & TS).
+*   `src/async_await_demo`: Asynchronous programming examples.
+*   `src/event_demo`: Node.js Event Emitter patterns.
+
 ## Step-by-Step Learning Guide
 
 Follow these modules to understand the progression of concepts in this workspace.
 
 ### Step 1: Node.js Basics (Classes & Modules)
-Understand how classes and modules work in standard Node.js (CommonJS).
+Understand how classes and modules work in both standard Node.js (CommonJS) and TypeScript.
 
 *   **Key Files**:
-    *   [`node_class_demo/Person.js`](node_class_demo/Person.js): A simple class definition using `module.exports`.
-    *   [`node_class_demo/index.js`](node_class_demo/index.js): Importing and using the class.
-*   **How to Run**:
-    ```bash
-    node node_class_demo/index.js
-    ```
+    *   [`src/models/Person.js`](src/models/Person.js): A simple class definition using `module.exports`.
+    *   [`src/models/Person.ts`](src/models/Person.ts): A strongly-typed class definition.
+    *   [`src/index.js`](src/index.js): Entry point for JS examples.
+    *   [`src/index.ts`](src/index.ts): Entry point for TS examples.
 
-### Step 2: TypeScript Fundamentals
-Learn how to use TypeScript for type safety and modern class syntax.
+### Step 2: Async/Await & Promises
+Learn how to handle asynchronous operations, promises, and the async/await syntax.
 
 *   **Key Files**:
-    *   [`ts_class_demo/Person.ts`](ts_class_demo/Person.ts): A strongly-typed class.
-    *   [`ts_class_demo/index.ts`](ts_class_demo/index.ts): Using the class with type checking.
+    *   [`src/async_await_demo/index.ts`](src/async_await_demo/index.ts): Comprehensive demo of async functions, promise chaining, and error handling.
 *   **How to Run**:
     ```bash
-    # Requires compiling first, or running with ts-node (if installed)
-    tsc && node ts_class_demo/dist/index.js
+    npx ts-node src/async_await_demo/index.ts
     ```
 
-### Step 3: Async/Await & Promises
-Master asynchronous programming to handle operations like file I/O and API calls efficiently.
+### Step 3: Event Emitters
+Explore the Node.js `events` module to build event-driven architectures.
 
 *   **Key Files**:
-    *   [`src/async_await_demo/index.ts`](src/async_await_demo/index.ts): Demonstrates `Promise`, `async/await`, sequential vs parallel execution, and file I/O.
-    *   [`learnings.md`](learnings.md): Detailed notes on concepts like `Promise<void>` and the `main()` function.
+    *   [`src/event_demo/TicketManager.ts`](src/event_demo/TicketManager.ts): A class extending `EventEmitter`.
+    *   [`src/event_demo/index.ts`](src/event_demo/index.ts): Listening to and emitting events.
 *   **How to Run**:
     ```bash
-    npm run start:async
+    npx ts-node src/event_demo/index.ts
     ```
 
-### Step 4: Main Application Structure
-See how a TypeScript project is structured with a `src` folder and build process.
-
-*   **Key Files**:
-    *   [`src/index.ts`](src/index.ts): The entry point for the main application.
-    *   [`tsconfig.json`](tsconfig.json): Configuration for the TypeScript compiler.
-*   **How to Run**:
-    ```bash
-    npm start
-    ```
-
-## Project Structure
-
-```text
-AI_Workspace/
-├── dist/               # Compiled JavaScript files
-├── node_class_demo/    # Node.js class examples
-├── src/                # Main application source
-│   └── async_await_demo/ # Async/Await examples
-├── ts_class_demo/      # TypeScript class examples
-├── package.json        # Project dependencies and scripts
-├── tsconfig.json       # TypeScript configuration
-├── learnings.md        # Detailed notes on concepts learned
-└── README.md           # Project documentation
-```
-
-## Learning Goals
+## Future Learning Goals
 
 *   Understand Node.js runtime and event loop.
 *   Master TypeScript syntax, types, and interfaces.
