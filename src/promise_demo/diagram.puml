@@ -1,0 +1,53 @@
+@startuml PromiseFlow
+title Promise Execution Flow
+
+participant User
+participant "Main Function" as Main
+participant "orderPizza()" as Pizza
+participant "Timer (Async API)" as Timer
+
+User -> Main: Run Script
+activate Main
+
+== Method 1: .then() ==
+Main -> Pizza: orderPizza("Pepperoni")
+activate Pizza
+Pizza -> Timer: setTimeout(2000ms)
+Pizza --> Main: Return Promise (Pending)
+deactivate Pizza
+
+note right of Main
+  The code continues...
+  but we wait for the 
+  Promise to resolve
+end note
+
+... 2 seconds later ...
+Timer -> Pizza: Callback Triggered
+activate Pizza
+Pizza --> Main: Resolve Promise ("Here is your Pepperoni pizza!")
+deactivate Pizza
+Main -> Main: .then() callback executes
+Main -> User: Log "Success"
+
+== Method 2: async/await ==
+Main -> Pizza: orderPizza("Margherita")
+activate Pizza
+Pizza -> Timer: setTimeout(2000ms)
+Pizza --> Main: Return Promise (Pending)
+deactivate Pizza
+
+note right of Main
+  "await" pauses execution
+  of this function here
+end note
+
+... 2 seconds later ...
+Timer -> Pizza: Callback Triggered
+activate Pizza
+Pizza --> Main: Resolve Promise ("Here is your Margherita pizza!")
+deactivate Pizza
+Main -> User: Log "Success"
+
+deactivate Main
+@enduml

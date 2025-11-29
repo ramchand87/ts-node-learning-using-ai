@@ -1,0 +1,29 @@
+@startuml NodeClass
+title Node.js CommonJS Class Diagram
+
+class Person {
+  +name
+  +age
+  +constructor(name, age)
+  +greet()
+}
+
+note right of Person
+  Exported using
+  module.exports = Person
+end note
+
+object "person1" as p1 {
+  name = "Alice"
+  age = 30
+}
+
+object "person2" as p2 {
+  name = "Bob"
+  age = 25
+}
+
+Person ..> p1 : Instantiates
+Person ..> p2 : Instantiates
+
+@enduml

@@ -28,7 +28,8 @@ The project is organized into `src` containing various learning modules:
 
 *   `src/node_class_demo`: Basic Node.js class & module demo (CommonJS).
 *   `src/ts_class_demo`: Basic TypeScript class & module demo.
-*   `src/async_await_demo`: Asynchronous programming examples.
+*   `src/promise_demo`: Fundamental Promise concepts.
+*   `src/async_await_demo`: Advanced Async/Await & Parallel execution.
 *   `src/event_demo`: Node.js Event Emitter patterns.
 
 ## Step-by-Step Learning Guide
@@ -38,40 +39,47 @@ Follow these modules to understand the progression of concepts in this workspace
 ### Step 1: Node.js Basics (Classes & Modules)
 Understand how classes and modules work in both standard Node.js (CommonJS) and TypeScript.
 
+*   **Documentation**: [README](src/node_class_demo/README.md) | [Diagram](src/node_class_demo/diagram.puml)
 *   **Key Files**:
-    *   [`src/node_class_demo/Person.js`](src/node_class_demo/Person.js): A simple class definition using `module.exports`.
-    *   [`src/node_class_demo/index.js`](src/node_class_demo/index.js): Importing and using the class.
-    *   [`src/ts_class_demo/Person.ts`](src/ts_class_demo/Person.ts): A strongly-typed class definition.
-    *   [`src/ts_class_demo/index.ts`](src/ts_class_demo/index.ts): Using the class with type checking.
-
+    *   [`src/node_class_demo/Person.js`](src/node_class_demo/Person.js)
+    *   [`src/ts_class_demo/Person.ts`](src/ts_class_demo/Person.ts)
 *   **How to Run**:
     ```bash
-    # Run Node.js demo
     node src/node_class_demo/index.js
-
-    # Run TypeScript demo
     npx ts-node src/ts_class_demo/index.ts
     ```
 
-### Step 2: Async/Await & Promises
-Learn how to handle asynchronous operations, promises, and the async/await syntax.
+### Step 2: Promises (The Foundation)
+Learn the core concept of Promises, how to create them, and how to consume them using `.then()` vs `async/await`.
 
+*   **Documentation**: [README](src/promise_demo/README.md) | [Diagram](src/promise_demo/diagram.puml)
 *   **Key Files**:
-    *   [`src/async_await_demo/index.ts`](src/async_await_demo/index.ts): Comprehensive demo of async functions, promise chaining, and error handling.
+    *   [`src/promise_demo/index.ts`](src/promise_demo/index.ts)
 *   **How to Run**:
     ```bash
-    npx ts-node src/async_await_demo/index.ts
+    npm run start:promise
     ```
 
-### Step 3: Event Emitters
-Explore the Node.js `events` module to build event-driven architectures.
+### Step 3: Async/Await & Parallel Execution
+Deep dive into sequential vs. parallel execution and file I/O using `fs/promises`.
 
+*   **Documentation**: [README](src/async_await_demo/README.md) | [Diagram](src/async_await_demo/diagram.puml)
 *   **Key Files**:
-    *   [`src/event_demo/TicketManager.ts`](src/event_demo/TicketManager.ts): A class extending `EventEmitter`.
-    *   [`src/event_demo/index.ts`](src/event_demo/index.ts): Listening to and emitting events.
+    *   [`src/async_await_demo/index.ts`](src/async_await_demo/index.ts)
 *   **How to Run**:
     ```bash
-    npx ts-node src/event_demo/index.ts
+    npm run start:async
+    ```
+
+### Step 4: Event Emitters
+Explore the Node.js `events` module to build event-driven architectures.
+
+*   **Documentation**: [README](src/event_demo/README.md) | [Diagram](src/event_demo/design.puml)
+*   **Key Files**:
+    *   [`src/event_demo/TicketManager.ts`](src/event_demo/TicketManager.ts)
+*   **How to Run**:
+    ```bash
+    npm run start:events
     ```
 
 ## Future Learning Goals

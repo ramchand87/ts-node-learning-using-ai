@@ -1,0 +1,47 @@
+@startuml AsyncExecution
+title Sequential vs Parallel Execution
+
+participant Main
+participant "fetchUserData(1)" as U1
+participant "fetchUserData(2)" as U2
+participant "fetchUserData(3)" as U3
+participant "fetchUserData(4)" as U4
+
+== Sequential Execution (Slower) ==
+Main -> U1: Call
+activate U1
+U1 -> U1: Wait 1s
+U1 --> Main: Return User 1
+deactivate U1
+
+Main -> U2: Call
+activate U2
+U2 -> U2: Wait 1s
+U2 --> Main: Return User 2
+deactivate U2
+
+note right of Main
+  Total Time: ~2 Seconds
+  (1s + 1s)
+end note
+
+== Parallel Execution (Faster) ==
+Main -> U3: Call
+activate U3
+Main -> U4: Call
+activate U4
+
+U3 -> U3: Wait 1s
+U4 -> U4: Wait 1s
+
+U3 --> Main: Return User 3
+deactivate U3
+U4 --> Main: Return User 4
+deactivate U4
+
+note right of Main
+  Total Time: ~1 Second
+  (Both run at the same time)
+end note
+
+@enduml

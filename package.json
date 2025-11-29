@@ -8,7 +8,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "start:async": "tsc && node dist/async_await_demo/index.js",
-    "start:events": "tsc && node dist/event_demo/index.js"
+    "start:events": "tsc && node dist/event_demo/index.js",
+    "start:promise": "tsc && node dist/promise_demo/index.js"
   },
   "keywords": [],
   "author": "",
