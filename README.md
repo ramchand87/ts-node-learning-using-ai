@@ -34,11 +34,17 @@ npm start
 
 This command uses `tsc` to build the project and `node` to execute the output in `dist/index.js`.
 
+To run the **Async/Await Demo**:
+```bash
+npm run start:async
+```
+
 ### Exploring Demos
 
 The workspace is organized into different sections:
 
 *   **`src/`**: Main source code for the workspace.
+    *   **`src/async_await_demo/`**: Examples of Asynchronous programming using Promises and Async/Await.
 *   **`ts_class_demo/`**: Demonstrations specifically focused on TypeScript classes and object-oriented programming concepts.
 *   **`node_class_demo/`**: Examples of Node.js specific class implementations and module patterns.
 
@@ -52,6 +58,7 @@ AI_Workspace/
 ├── ts_class_demo/      # TypeScript class examples
 ├── package.json        # Project dependencies and scripts
 ├── tsconfig.json       # TypeScript configuration
+├── learnings.md        # Detailed notes on concepts learned
 └── README.md           # Project documentation
 ```
 
