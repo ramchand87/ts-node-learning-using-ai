@@ -6,11 +6,6 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 
 
 
-### 3. Debugging & Profiling (Completed)
-*   **Concepts**:
-    *   **Debugging**: Configuring VS Code (`launch.json`) to attach to the Node process.
-    *   **Profiling**: Using `node --inspect`, Chrome DevTools, and libraries like `heapdump` to analyze memory usage.
-*   **Goal**: Launch the app in debug mode, hit a breakpoint, and inspect the heap memory.
 
 ## Phase 2: Building Web APIs (NestJS)
 
