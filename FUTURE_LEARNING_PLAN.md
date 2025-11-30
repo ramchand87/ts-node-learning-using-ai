@@ -5,12 +5,8 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 ## Phase 1: Core Node.js & Tooling
 
 
-### 2. Log Handling (The "SLF4J" of Node) (Completed)
-*   **Concepts**: Structured logging using **Winston** or **Pino**.
-*   **Java Equivalent**: SLF4J + Logback/Log4j.
-*   **Goal**: Replace `console.log` with a logger that supports levels (INFO, ERROR), timestamps, and file rotation.
 
-### 3. Debugging & Profiling
+### 3. Debugging & Profiling (Completed)
 *   **Concepts**:
     *   **Debugging**: Configuring VS Code (`launch.json`) to attach to the Node process.
     *   **Profiling**: Using `node --inspect`, Chrome DevTools, and libraries like `heapdump` to analyze memory usage.

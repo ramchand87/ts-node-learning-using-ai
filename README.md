@@ -107,6 +107,32 @@ Learn how to work with the file system (`fs`) and handle large files efficiently
     npx ts-node src/file_handling_demo/StreamOps.ts
     ```
 
+### Step 7: Log Handling (Winston)
+Implement structured logging with levels, timestamps, and file rotation using Winston.
+
+*   **Documentation**: [README](src/log_handling_demo/README.md)
+*   **Key Files**:
+    *   [`src/log_handling_demo/Logger.ts`](src/log_handling_demo/Logger.ts)
+    *   [`src/log_handling_demo/Usage.ts`](src/log_handling_demo/Usage.ts)
+*   **How to Run**:
+    ```bash
+    npx ts-node src/log_handling_demo/Usage.ts
+    ```
+
+### Step 8: Debugging & Profiling
+Learn how to debug Node.js apps in VS Code and profile memory leaks using Chrome DevTools.
+
+*   **Documentation**: [README](src/debug_demo/README.md)
+*   **Key Files**:
+    *   [`src/debug_demo/MemoryLeak.ts`](src/debug_demo/MemoryLeak.ts)
+    *   [`.vscode/launch.json`](.vscode/launch.json)
+*   **How to Run**:
+    *   **Debug**: Open `src/debug_demo/MemoryLeak.ts` and press **F5**.
+    *   **Profile**:
+        ```bash
+        node --inspect -r ts-node/register src/debug_demo/MemoryLeak.ts
+        ```
+
 ## Future Learning Goals
 
 *   Understand Node.js runtime and event loop.
