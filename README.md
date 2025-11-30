@@ -133,6 +133,19 @@ Learn how to debug Node.js apps in VS Code and profile memory leaks using Chrome
         node --inspect -r ts-node/register src/debug_demo/MemoryLeak.ts
         ```
 
+### Step 9: NestJS Fundamentals
+Learn the basics of NestJS: Modules, Controllers, Providers, and Dependency Injection.
+
+*   **Documentation**: [README](src/nestjs_basics/README.md)
+*   **Key Files**:
+    *   [`src/nestjs_basics/main.ts`](src/nestjs_basics/main.ts)
+    *   [`src/nestjs_basics/app.module.ts`](src/nestjs_basics/app.module.ts)
+    *   [`src/nestjs_basics/product.controller.ts`](src/nestjs_basics/product.controller.ts)
+*   **How to Run**:
+    ```bash
+    npm run start:nest
+    ```
+
 ## Future Learning Goals
 
 *   Understand Node.js runtime and event loop.

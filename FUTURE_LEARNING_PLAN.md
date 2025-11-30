@@ -9,10 +9,6 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 
 ## Phase 2: Building Web APIs (NestJS)
 
-### 4. NestJS Fundamentals (Modules & Controllers)
-*   **Concepts**: Setting up a **NestJS** project, Modules, Controllers (GET, POST), and Dependency Injection.
-*   **Java Equivalent**: Spring Boot `@SpringBootApplication`, `@RestController`, `@Autowired`.
-*   **Goal**: Create a "Product Inventory" API using NestJS CLI.
 
 ### 5. Guards & Interceptors (Authentication)
 *   **Concepts**: NestJS **Guards** (for Auth) and **Interceptors** (for logging/transforming).
