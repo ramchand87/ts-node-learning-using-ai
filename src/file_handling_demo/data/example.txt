@@ -1,0 +1,2 @@
+Hello from Synchronous Write!
+Hello from Asynchronous Append!

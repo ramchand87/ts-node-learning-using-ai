@@ -94,6 +94,19 @@ Learn how to write unit tests using Jest, covering mocks, spies, and async testi
     npm test
     ```
 
+### Step 6: File Handling & Streams
+Learn how to work with the file system (`fs`) and handle large files efficiently using Streams.
+
+*   **Documentation**: [README](src/file_handling_demo/README.md)
+*   **Key Files**:
+    *   [`src/file_handling_demo/FileOps.ts`](src/file_handling_demo/FileOps.ts)
+    *   [`src/file_handling_demo/StreamOps.ts`](src/file_handling_demo/StreamOps.ts)
+*   **How to Run**:
+    ```bash
+    npx ts-node src/file_handling_demo/FileOps.ts
+    npx ts-node src/file_handling_demo/StreamOps.ts
+    ```
+
 ## Future Learning Goals
 
 *   Understand Node.js runtime and event loop.

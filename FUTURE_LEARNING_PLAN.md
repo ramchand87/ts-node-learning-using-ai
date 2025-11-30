@@ -4,10 +4,6 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 
 ## Phase 1: Core Node.js & Tooling
 
-### 1. File Handling & Streams
-*   **Concepts**: `fs` module (Sync vs Async), `path` module, and **Streams** (for handling large files efficiently).
-*   **Java Equivalent**: `java.io.File`, `java.nio`, `InputStream`.
-*   **Goal**: Create a script that reads a large file line-by-line and writes specific lines to a new file.
 
 ### 2. Log Handling (The "SLF4J" of Node)
 *   **Concepts**: Structured logging using **Winston** or **Pino**.
