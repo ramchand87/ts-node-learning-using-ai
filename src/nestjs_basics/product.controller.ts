@@ -1,10 +1,13 @@
-import { Controller, Get, Post, Body, Query, Param, NotFoundException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Query, Param, NotFoundException, UseGuards, UseInterceptors } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiQuery, ApiParam, ApiBody } from '@nestjs/swagger';
 import { ProductService, Product } from './product.service';
 import { CreateProductDto } from './create-product.dto';
+import { AuthGuard } from './auth.guard';
+import { TransformInterceptor } from './transform.interceptor';
 
 @ApiTags('products')
 @Controller('products')
+@UseInterceptors(TransformInterceptor)
 export class ProductController {
     constructor(private readonly productService: ProductService) { }
 
@@ -30,9 +33,11 @@ export class ProductController {
     }
 
     @Post()
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Create a new product' })
     @ApiBody({ type: CreateProductDto })
     @ApiResponse({ status: 201, description: 'The product has been successfully created.' })
+    @ApiResponse({ status: 401, description: 'Unauthorized.' })
     create(@Body() product: CreateProductDto): Product {
         return this.productService.create(product);
     }

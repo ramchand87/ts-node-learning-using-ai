@@ -141,6 +141,9 @@ Learn the basics of NestJS: Modules, Controllers, Providers, and Dependency Inje
     *   [`src/nestjs_basics/main.ts`](src/nestjs_basics/main.ts)
     *   [`src/nestjs_basics/app.module.ts`](src/nestjs_basics/app.module.ts)
     *   [`src/nestjs_basics/product.controller.ts`](src/nestjs_basics/product.controller.ts)
+    *   [`src/nestjs_basics/auth.guard.ts`](src/nestjs_basics/auth.guard.ts)
+    *   [`src/nestjs_basics/logging.interceptor.ts`](src/nestjs_basics/logging.interceptor.ts)
+    *   [`src/nestjs_basics/transform.interceptor.ts`](src/nestjs_basics/transform.interceptor.ts)
 *   **How to Run**:
     ```bash
     npm run start:nest
