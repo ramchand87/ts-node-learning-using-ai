@@ -25,12 +25,8 @@ Transports define *where* the logs should go.
 
 ## Java Comparison
 
-| Concept | Java (SLF4J + Logback) | Node.js (Winston) |
-| :--- | :--- | :--- |
-| **Logger Instance** | `LoggerFactory.getLogger(Class.class)` | `winston.createLogger({...})` |
-| **Log Levels** | `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE` | `error`, `warn`, `info`, `debug`, `silly` |
-| **Configuration** | `logback.xml` or `log4j2.xml` | JavaScript/TypeScript Object |
-| **Appenders** | ConsoleAppender, FileAppender | Transports (Console, File) |
+> [!TIP]
+> **Coming from Java?** Check out our **[Java vs Node.js Logging Guide](./JAVA_COMPARISON.md)**.
 
 ## Files
 

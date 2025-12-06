@@ -10,17 +10,20 @@
     "start:async": "tsc && node dist/async_await_demo/index.js",
     "start:events": "tsc && node dist/event_demo/index.js",
     "start:promise": "tsc && node dist/promise_demo/index.js",
-    "start:nest": "npx ts-node src/nestjs_basics/main.ts"
+    "start:nest": "npx ts-node src/nestjs_basics/main.ts",
+    "start:http": "npx ts-node src/nestjs_http_demo/main.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@nestjs/axios": "^4.0.1",
     "@nestjs/common": "^11.1.9",
     "@nestjs/core": "^11.1.9",
     "@nestjs/platform-express": "^11.1.9",
     "@nestjs/swagger": "^11.2.3",
+    "axios": "^1.13.2",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.3",
     "express": "^5.1.0",

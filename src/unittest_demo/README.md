@@ -1,6 +1,9 @@
 # Unit Testing with Jest
 
-This tutorial demonstrates how to write unit tests in Node.js using **Jest**, the industry-standard testing framework. It covers concepts familiar to Java developers (JUnit/Mockito) adapted for the JavaScript ecosystem.
+This tutorial demonstrates how to write unit tests in Node.js using **Jest**, the industry-standard testing framework.
+
+> [!TIP]
+> **Coming from Java?** Check out our **[Java vs Node.js Unit Testing Guide](./JAVA_COMPARISON.md)**.
 
 ## What is Covered?
 

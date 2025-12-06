@@ -2,20 +2,18 @@
 
 This document outlines the roadmap for upcoming learning sessions. We will tackle these topics one by one.
 
-## Phase 1: Core Node.js & Tooling
 
 
 
 
-## Phase 2: Building Web APIs (NestJS)
 
 
 
 
-### 6. Making External REST Calls (HttpModule)
-*   **Concepts**: Using **HttpModule** (Axios wrapper) and **RxJS** Observables.
-*   **Java Equivalent**: `WebClient` (Reactive) or `RestTemplate`.
-*   **Goal**: Fetch data from a public API using NestJS HttpService.
+
+
+
+
 
 ## Phase 3: Production Readiness (NestJS Best Practices)
 

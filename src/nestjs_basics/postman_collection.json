@@ -78,6 +78,11 @@
                         "key": "Content-Type",
                         "value": "application/json",
                         "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "secret_token",
+                        "type": "text"
                     }
                 ],
                 "body": {

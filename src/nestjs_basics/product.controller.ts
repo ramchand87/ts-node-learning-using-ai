@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Query, Param, NotFoundException, UseGuards, UseInterceptors } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiResponse, ApiQuery, ApiParam, ApiBody } from '@nestjs/swagger';
+import { ApiTags, ApiOperation, ApiResponse, ApiQuery, ApiParam, ApiBody, ApiHeader } from '@nestjs/swagger';
 import { ProductService, Product } from './product.service';
 import { CreateProductDto } from './create-product.dto';
 import { AuthGuard } from './auth.guard';
@@ -35,6 +35,11 @@ export class ProductController {
     @Post()
     @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Create a new product' })
+    @ApiHeader({
+        name: 'Authorization',
+        description: 'Auth token (use "secret_token")',
+        required: true,
+    })
     @ApiBody({ type: CreateProductDto })
     @ApiResponse({ status: 201, description: 'The product has been successfully created.' })
     @ApiResponse({ status: 401, description: 'Unauthorized.' })

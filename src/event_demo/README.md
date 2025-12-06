@@ -2,6 +2,9 @@
 
 This tutorial demonstrates the **Observer Pattern** in Node.js using the built-in `events` module.
 
+> [!TIP]
+> **Coming from Java?** Check out our **[Java vs Node.js Event Guide](./JAVA_COMPARISON.md)**.
+
 ## What is Covered?
 
 1.  **Extending EventEmitter**: Creating a custom class (`TicketManager`) that inherits from `EventEmitter`.

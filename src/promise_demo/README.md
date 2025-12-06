@@ -2,6 +2,9 @@
 
 This tutorial demonstrates the fundamental concepts of asynchronous programming in Node.js using Promises.
 
+> [!TIP]
+> **Coming from Java?** Check out our **[Java vs Node.js Async Guide](./JAVA_COMPARISON.md)**.
+
 ## What is Covered?
 
 1.  **Creating a Promise**: How to wrap an asynchronous operation (like a timer) in a Promise.

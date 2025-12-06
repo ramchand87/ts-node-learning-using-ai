@@ -64,3 +64,9 @@ Why are they separated? Beacuse they run at different stages of the request life
 | `GET` | `/products` | List all products | Public | `curl http://localhost:3000/products` |
 | `GET` | `/products/:id` | Get by ID | Public | `curl http://localhost:3000/products/1` |
 | `POST` | `/products` | Create product | **Protected** | `Invoke-RestMethod ... -Headers @{Authorization="secret_token"}` |
+
+## Swagger API Docs
+Open [http://localhost:3000/api](http://localhost:3000/api) to see the Swagger UI.
+
+## Postman
+Import `postman_collection.json` to test the APIs. Note: The `POST /products` request is pre-configured with the required `Authorization: secret_token` header.

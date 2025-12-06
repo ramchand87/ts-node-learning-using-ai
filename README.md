@@ -36,6 +36,7 @@ The project is organized into `src` containing various learning modules:
 *   `src/log_handling_demo`: Structured logging with Winston.
 *   `src/debug_demo`: Debugging and Profiling tools.
 *   `src/nestjs_basics`: NestJS fundamentals (Modules, Controllers, Guards, Interceptors).
+*   `src/nestjs_http_demo`: Making external REST calls with HttpModule.
 
 ## Step-by-Step Learning Guide
 
@@ -155,3 +156,14 @@ Learn the basics of NestJS: Modules, Controllers, Providers, and Dependency Inje
     ```
 
 
+### Step 10: Making External REST Calls
+Learn how to use NestJS `HttpModule` to fetch data from external APIs using RxJS Observables.
+
+*   **Documentation**: [README](src/nestjs_http_demo/README.md)
+*   **Key Files**:
+    *   [`src/nestjs_http_demo/users.service.ts`](src/nestjs_http_demo/users.service.ts)
+    *   [`src/nestjs_http_demo/users.controller.ts`](src/nestjs_http_demo/users.controller.ts)
+*   **How to Run**:
+    ```bash
+    npm run start:http
+    ```
