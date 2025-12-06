@@ -10,10 +10,7 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 ## Phase 2: Building Web APIs (NestJS)
 
 
-### 5. Guards & Interceptors (Authentication)
-*   **Concepts**: NestJS **Guards** (for Auth) and **Interceptors** (for logging/transforming).
-*   **Java Equivalent**: Spring Security, AspectJ / AOP.
-*   **Goal**: Implement a Basic Auth Guard to protect specific routes.
+
 
 ### 6. Making External REST Calls (HttpModule)
 *   **Concepts**: Using **HttpModule** (Axios wrapper) and **RxJS** Observables.

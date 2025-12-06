@@ -31,6 +31,11 @@ The project is organized into `src` containing various learning modules:
 *   `src/promise_demo`: Fundamental Promise concepts.
 *   `src/async_await_demo`: Advanced Async/Await & Parallel execution.
 *   `src/event_demo`: Node.js Event Emitter patterns.
+*   `src/unittest_demo`: Unit testing with Jest.
+*   `src/file_handling_demo`: File System and Streams (fs).
+*   `src/log_handling_demo`: Structured logging with Winston.
+*   `src/debug_demo`: Debugging and Profiling tools.
+*   `src/nestjs_basics`: NestJS fundamentals (Modules, Controllers, Guards, Interceptors).
 
 ## Step-by-Step Learning Guide
 
@@ -149,9 +154,4 @@ Learn the basics of NestJS: Modules, Controllers, Providers, and Dependency Inje
     npm run start:nest
     ```
 
-## Future Learning Goals
 
-*   Understand Node.js runtime and event loop.
-*   Master TypeScript syntax, types, and interfaces.
-*   Learn NestJS framework fundamentals (Modules, Controllers, Providers).
-*   Experiment with AI-assisted coding workflows.
