@@ -11,7 +11,8 @@
     "start:events": "tsc && node dist/event_demo/index.js",
     "start:promise": "tsc && node dist/promise_demo/index.js",
     "start:nest": "npx ts-node src/nestjs_basics/main.ts",
-    "start:http": "npx ts-node src/nestjs_http_demo/main.ts"
+    "start:http": "npx ts-node src/nestjs_http_demo/main.ts",
+    "start:config": "npx ts-node src/nestjs_config_demo/main.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
   "dependencies": {
     "@nestjs/axios": "^4.0.1",
     "@nestjs/common": "^11.1.9",
+    "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.1.9",
     "@nestjs/platform-express": "^11.1.9",
     "@nestjs/swagger": "^11.2.3",

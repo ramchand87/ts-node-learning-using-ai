@@ -17,9 +17,7 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 
 ## Phase 3: Production Readiness (NestJS Best Practices)
 
-### 7. Environment Configuration
-*   **Concepts**: Using `@nestjs/config` to manage environment variables.
-*   **Java Equivalent**: `application.properties` / `@Value`.
+
 
 ### 8. Input Validation
 *   **Concepts**: Using **Pipes**, `class-validator`, and DTOs (Data Transfer Objects).

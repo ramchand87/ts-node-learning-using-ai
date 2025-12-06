@@ -37,6 +37,7 @@ The project is organized into `src` containing various learning modules:
 *   `src/debug_demo`: Debugging and Profiling tools.
 *   `src/nestjs_basics`: NestJS fundamentals (Modules, Controllers, Guards, Interceptors).
 *   `src/nestjs_http_demo`: Making external REST calls with HttpModule.
+*   `src/nestjs_config_demo`: Managing configurations with ConfigModule and .env.
 
 ## Step-by-Step Learning Guide
 
@@ -166,4 +167,16 @@ Learn how to use NestJS `HttpModule` to fetch data from external APIs using RxJS
 *   **How to Run**:
     ```bash
     npm run start:http
+    ```
+
+### Step 11: Environment Configuration
+Learn how to use `.env` files and `@nestjs/config` for 12-factor app configuration.
+
+*   **Documentation**: [README](src/nestjs_config_demo/README.md)
+*   **Key Files**:
+    *   [`src/nestjs_config_demo/.env`](src/nestjs_config_demo/.env)
+    *   [`src/nestjs_config_demo/app.module.ts`](src/nestjs_config_demo/app.module.ts)
+*   **How to Run**:
+    ```bash
+    npm run start:config
     ```
