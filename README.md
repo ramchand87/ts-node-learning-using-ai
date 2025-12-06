@@ -38,6 +38,7 @@ The project is organized into `src` containing various learning modules:
 *   `src/nestjs_basics`: NestJS fundamentals (Modules, Controllers, Guards, Interceptors).
 *   `src/nestjs_http_demo`: Making external REST calls with HttpModule.
 *   `src/nestjs_config_demo`: Managing configurations with ConfigModule and .env.
+*   `src/nestjs_validation_demo`: Validating input using DTOs, pipes, and class-validator.
 
 ## Step-by-Step Learning Guide
 
@@ -179,4 +180,16 @@ Learn how to use `.env` files and `@nestjs/config` for 12-factor app configurati
 *   **How to Run**:
     ```bash
     npm run start:config
+    ```
+
+### Step 12: Input Validation
+Learn how to ensure data integrity using `class-validator` and Pipe transformations.
+
+*   **Documentation**: [README](src/nestjs_validation_demo/README.md)
+*   **Key Files**:
+    *   [`src/nestjs_validation_demo/dto/create-user.dto.ts`](src/nestjs_validation_demo/dto/create-user.dto.ts)
+    *   [`src/nestjs_validation_demo/main.ts`](src/nestjs_validation_demo/main.ts)
+*   **How to Run**:
+    ```bash
+    npm run start:validation
     ```

@@ -1,0 +1,96 @@
+{
+    "info": {
+        "_postman_id": "nestjs-validation-demo",
+        "name": "NestJS Validation Demo",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create User (Valid)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"test@test.com\",\n    \"age\": 25,\n    \"password\": \"securepassword\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3003/users",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3003",
+                    "path": [
+                        "users"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create User (Invalid - Age)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"test@test.com\",\n    \"age\": 10,\n    \"password\": \"securepassword\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3003/users",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3003",
+                    "path": [
+                        "users"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create User (Invalid - Email & Password)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"not-an-email\",\n    \"age\": 25,\n    \"password\": \"short\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3003/users",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3003",
+                    "path": [
+                        "users"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

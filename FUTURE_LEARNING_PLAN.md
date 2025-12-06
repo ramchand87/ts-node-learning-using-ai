@@ -19,9 +19,7 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 
 
 
-### 8. Input Validation
-*   **Concepts**: Using **Pipes**, `class-validator`, and DTOs (Data Transfer Objects).
-*   **Java Equivalent**: Bean Validation (`@NotNull`, `@Size`) with `@Valid`.
+
 
 ### 9. Global Error Handling
 *   **Concepts**: **Exception Filters** to handle errors globally.
