@@ -13,7 +13,8 @@
     "start:nest": "npx ts-node src/nestjs_basics/main.ts",
     "start:http": "npx ts-node src/nestjs_http_demo/main.ts",
     "start:config": "npx ts-node src/nestjs_config_demo/main.ts",
-    "start:validation": "npx ts-node src/nestjs_validation_demo/main.ts"
+    "start:validation": "npx ts-node src/nestjs_validation_demo/main.ts",
+    "start:exception": "npx ts-node src/nestjs_exception_demo/main.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,69 @@
+{
+    "info": {
+        "_postman_id": "nestjs-exception-demo",
+        "name": "NestJS Global Exception Demo",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Trigger 403 Forbidden",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3004/demo/forbidden",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3004",
+                    "path": [
+                        "demo",
+                        "forbidden"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Trigger 500 Error",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3004/demo/error",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3004",
+                    "path": [
+                        "demo",
+                        "error"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Trigger Custom 418",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3004/demo/custom",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3004",
+                    "path": [
+                        "demo",
+                        "custom"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

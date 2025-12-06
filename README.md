@@ -39,6 +39,7 @@ The project is organized into `src` containing various learning modules:
 *   `src/nestjs_http_demo`: Making external REST calls with HttpModule.
 *   `src/nestjs_config_demo`: Managing configurations with ConfigModule and .env.
 *   `src/nestjs_validation_demo`: Validating input using DTOs, pipes, and class-validator.
+*   `src/nestjs_exception_demo`: Global error handling using Exception Filters.
 
 ## Step-by-Step Learning Guide
 
@@ -192,4 +193,16 @@ Learn how to ensure data integrity using `class-validator` and Pipe transformati
 *   **How to Run**:
     ```bash
     npm run start:validation
+    ```
+
+### Step 13: Global Error Handling
+Standardize error responses across the application using **Exception Filters**.
+
+*   **Documentation**: [README](src/nestjs_exception_demo/README.md)
+*   **Key Files**:
+    *   [`src/nestjs_exception_demo/http-exception.filter.ts`](src/nestjs_exception_demo/http-exception.filter.ts)
+    *   [`src/nestjs_exception_demo/main.ts`](src/nestjs_exception_demo/main.ts)
+*   **How to Run**:
+    ```bash
+    npm run start:exception
     ```
