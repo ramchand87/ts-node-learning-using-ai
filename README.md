@@ -222,3 +222,21 @@ Initialize a React application with Vite, Tailwind CSS, and client-side routing.
     # Run tests
     npm test
     ```
+
+### Step 15: State Management (Redux)
+Implement global state management using Redux Toolkit.
+*   **Documentation**: [README](react-ui/src/store/README.md)
+*   **Key Files**:
+    *   [`react-ui/src/store/store.ts`](react-ui/src/store/store.ts)
+    *   [`react-ui/src/store/slices/playgroundSlice.ts`](react-ui/src/store/slices/playgroundSlice.ts)
+*   **How to Run**:
+    ```bash
+    cd react-ui
+
+### Step 16: Client-Side Persistence (IndexedDB)
+Persist Redux state across page reloads using the `idb` library.
+*   **Key Files**:
+    *   [`react-ui/src/db/database.ts`](react-ui/src/db/database.ts)
+    *   [`react-ui/src/App.tsx`](react-ui/src/App.tsx)
+    *   [`react-ui/src/store/slices/playgroundSlice.ts`](react-ui/src/store/slices/playgroundSlice.ts)
+

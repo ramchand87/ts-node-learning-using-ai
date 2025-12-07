@@ -23,9 +23,14 @@ export const playgroundSlice = createSlice({
         deleteText: (state, action: PayloadAction<number>) => {
             state.textList = state.textList.filter((_, index) => index !== action.payload);
         },
+        setLoadedState: (state, action: PayloadAction<PlaygroundState>) => {
+            // Replaces the current state with what we loaded from DB
+            state.count = action.payload.count;
+            state.textList = action.payload.textList;
+        }
     },
 });
 
-export const { increment, addText, deleteText } = playgroundSlice.actions;
+export const { increment, addText, deleteText, setLoadedState } = playgroundSlice.actions;
 
 export default playgroundSlice.reducer;

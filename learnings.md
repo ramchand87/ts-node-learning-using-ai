@@ -37,5 +37,33 @@ This document tracks key concepts and technical learnings from the "AI Workspace
     *   Defining the function `main` doesn't run it. This line explicitly calls the function to start the program. Without it, the script would do nothing.
 
 ### Execution Patterns
-*   **Sequential**: `await func1(); await func2();` - Runs one after the other. Good when the second depends on the first.
 *   **Parallel**: `await Promise.all([func1(), func2()]);` - Runs both simultaneously. Much faster for independent tasks.
+
+## NestJS Fundamentals (Phases 2-3)
+**Date:** 2025-12-05
+
+### Core Concepts
+*   **Modules**: The building blocks of NestJS (e.g., `HttpModule`, `ConfigModule`).
+*   **Global Filters**: We created an `HttpExceptionFilter` to catch and format errors globally.
+*   **DTOs & Validation**: Used `class-validator` to ensure incoming data is correct.
+
+## React & Frontend Architecture (Phase 4)
+**Date:** 2025-12-06 - 2025-12-07
+
+### 1. Project Setup
+*   **Vite**: The build tool. Fast and modern.
+*   **Tailwind CSS**: Utility-first CSS framework for rapid styling.
+
+### 2. Redux Toolkit (State Management)
+*   **Store**: The single source of truth for global state.
+*   **Slices**: A way to bundle Reducer logic and Actions together (e.g., `playgroundSlice`).
+*   **Hooks**: `useAppDispatch` and `useAppSelector` for type-safe interaction.
+*   **Benefit**: Decouples State from UI. State survives even if components unmount.
+
+### 3. Client-Side Persistence (IndexedDB)
+*   **Problem**: Redux state is lost on page reload.
+*   **Solution**: **IndexedDB** (Browser's built-in NoSQL database).
+*   **`idb` Library**: Wrapped the crude Event-based API into nice **Promises**.
+*   **Wiring**:
+    *   **Hydration**: App loads data from DB on startup -> Updates Redux.
+    *   **Subscription**: App watches Redux changes -> Saves to DB.
