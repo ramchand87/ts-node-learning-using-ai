@@ -252,3 +252,11 @@ Split the UI into a **Host** (`react-ui`) and **Remote** (`remote-app`) using Mo
     # 2. Start Host (Port 5173)
     cd react-ui && npm run dev
     ```
+### Step 18: React-NestJS Integration
+Connect the Frontend to the Backend to fetch/create data.
+*   **Documentation**: [learnings.md](learnings.md#5-integration-react--nestjs)
+*   **Key Concepts**: CORS, Axios, Consuming APIs.
+*   **How to Run**:
+    1.  Start Backend (Port 3000): `npm run start:nest`
+    2.  Start Frontend (Port 5173): `cd react-ui && npm run dev`
+    3.  Visit `/products`

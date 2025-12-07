@@ -77,3 +77,8 @@ This document tracks key concepts and technical learnings from the "AI Workspace
 *   **Gotchas**:
     *   **Singletons**: Critical libraries like `react` MUST be shared as singletons.
     *   **Version Mismatch**: Host and Remote must use compatible versions (e.g., both React 18).
+
+### 5. Integration (React + NestJS)
+*   **CORS**: Browsers block frontend requests to a different port (5173 -> 3000) unless `app.enableCors()` is set in NestJS.
+*   **Interceptors**: If NestJS uses a `TransformInterceptor` to wrap responses (e.g., `{ data: ... }`), the frontend MUST unwrap it (e.g., `response.data.data`) or the app will crash when iterating.
+*   **Proxies**: In production, we'd use Nginx or a Vite proxy to avoid CORS entirely.

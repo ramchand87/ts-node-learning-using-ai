@@ -11,13 +11,16 @@ const Navigation = () => {
         <nav className="bg-white shadow mb-8">
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
-                    <div className="font-bold text-xl text-gray-800">React AI Workspace</div>
+                    <div className="font-bold text-xl text-gray-800 dark:text-gray-200">React AI Workspace</div>
                     <div className="flex space-x-8">
                         <Link to="/" className={`font-medium transition-colors py-4 ${isActive('/')}`}>
                             Home
                         </Link>
                         <Link to="/playground" className={`font-medium transition-colors py-4 ${isActive('/playground')}`}>
                             Playground
+                        </Link>
+                        <Link to="/products" className={`font-medium transition-colors py-4 ${isActive('/products')}`}>
+                            Products (API)
                         </Link>
                     </div>
                 </div>

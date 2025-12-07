@@ -7,6 +7,7 @@ import { setLoadedState } from './store/slices/playgroundSlice';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Playground from './pages/Playground';
+import Products from './pages/Products';
 import './App.css';
 
 // Lazy Load the Remote Component
@@ -88,6 +89,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/playground" element={<Playground />} />
+              <Route path="/products" element={<Products />} />
             </Routes>
           </main>
         </div>
