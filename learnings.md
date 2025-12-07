@@ -67,3 +67,13 @@ This document tracks key concepts and technical learnings from the "AI Workspace
 *   **Wiring**:
     *   **Hydration**: App loads data from DB on startup -> Updates Redux.
     *   **Subscription**: App watches Redux changes -> Saves to DB.
+
+### 4. Micro-Frontends (Module Federation)
+*   **Concept**: Splitting a monolithic app into smaller, independent apps.
+*   **Host vs Remote**:
+    *   **Host**: The main app that loads other components (`react-ui`).
+    *   **Remote**: The provider app that exposes components (`remote-app`).
+*   **Module Federation**: Allows sharing code (like React) at runtime.
+*   **Gotchas**:
+    *   **Singletons**: Critical libraries like `react` MUST be shared as singletons.
+    *   **Version Mismatch**: Host and Remote must use compatible versions (e.g., both React 18).

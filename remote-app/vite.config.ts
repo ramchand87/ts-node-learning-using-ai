@@ -2,42 +2,35 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'react-ui',
-      remotes: {
-        remoteApp: 'http://localhost:5001/assets/remoteEntry.js',
+      name: 'remote-app',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './ReviewHeader': './src/components/ReviewHeader.tsx',
       },
       // @ts-expect-error - Shared configuration types are strict but singleton is supported
       shared: {
         react: {
           singleton: true,
-          requiredVersion: '^18.3.1',
         },
         'react-dom': {
           singleton: true,
-          requiredVersion: '^18.3.1',
         },
-        'react-router-dom': {
-          singleton: true,
-          requiredVersion: '^6.28.0',
-        }
       },
     }),
   ],
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
-    css: true,
-  },
   build: {
     modulePreload: false,
     target: 'esnext',
     minify: false,
     cssCodeSplit: false,
   },
+  preview: {
+    port: 5001,
+    strictPort: true,
+    cors: true,
+  }
 });

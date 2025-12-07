@@ -5,9 +5,6 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 
 ## Upcoming Learning
 
-### 14. Micro-Frontends
-*   **Goal**: Splitting the UI into host and remote applications.
-*   **Tech**: `@originjs/vite-plugin-federation`.
 
 ### 16. Integration
 *   **Goal**: Connecting the React UI to our NestJS Backend.
