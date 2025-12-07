@@ -206,3 +206,19 @@ Standardize error responses across the application using **Exception Filters**.
     ```bash
     npm run start:exception
     ```
+
+### Step 14: React UI Setup & Routing
+Initialize a React application with Vite, Tailwind CSS, and client-side routing. Learn how to create pages, handle events, and write unit tests.
+
+*   **Documentation**: [README](react-ui/README.md)
+*   **Key Files**:
+    *   [`react-ui/src/App.tsx`](react-ui/src/App.tsx)
+    *   [`react-ui/src/pages/Playground.tsx`](react-ui/src/pages/Playground.tsx)
+    *   [`react-ui/src/pages/Playground.test.tsx`](react-ui/src/pages/Playground.test.tsx)
+*   **How to Run**:
+    ```bash
+    cd react-ui
+    npm run dev
+    # Run tests
+    npm test
+    ```
