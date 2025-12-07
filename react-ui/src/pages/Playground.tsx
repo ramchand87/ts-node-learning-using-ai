@@ -1,9 +1,15 @@
 import { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { increment, addText, deleteText } from '../store/slices/playgroundSlice';
 
 const Playground = () => {
-    const [count, setCount] = useState(0);
+    // Redux State
+    const count = useAppSelector((state) => state.playground.count);
+    const textList = useAppSelector((state) => state.playground.textList);
+    const dispatch = useAppDispatch();
+
+    // Local UI State
     const [text, setText] = useState('');
-    const [textList, setTextList] = useState<string[]>([]);
     const [isChecked, setIsChecked] = useState(false);
     const [radioValue, setRadioValue] = useState('option1');
 
@@ -19,14 +25,13 @@ const Playground = () => {
 
     const handleAddText = () => {
         if (text.trim() !== '') {
-            setTextList([...textList, text]);
+            dispatch(addText(text));
             setText(''); // Clear input after adding
         }
     };
 
     const handleDeleteText = (indexToDelete: number) => {
-        // Filter out the item at the specific index
-        setTextList(textList.filter((_, index) => index !== indexToDelete));
+        dispatch(deleteText(indexToDelete));
     };
 
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -35,14 +40,14 @@ const Playground = () => {
 
     return (
         <div className="p-8 max-w-2xl mx-auto space-y-8">
-            <h1 className="text-3xl font-bold mb-6">UI Playground</h1>
+            <h1 className="text-3xl font-bold mb-6">UI Playground (Redux Powered)</h1>
 
             {/* Button Section */}
             <section className="p-6 border rounded-lg bg-white shadow-sm">
                 <h2 className="text-xl font-semibold mb-3">1. Buttons & Events</h2>
                 <div className="flex gap-4">
                     <button
-                        onClick={() => setCount((c) => c + 1)}
+                        onClick={() => dispatch(increment())}
                         className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
                     >
                         Count is {count}

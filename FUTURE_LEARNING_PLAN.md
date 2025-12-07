@@ -17,6 +17,10 @@ This document outlines the roadmap for upcoming learning sessions. We will tackl
 *   **Goal**: Managing global application state.
 *   **Tech**: Redux Toolkit, React Redux.
 
+### 13. Client-Side Persistence (IndexDB)
+*   **Goal**: Persisting state across reloads (handling large data).
+*   **Tech**: `idb` (Promised-based wrapper), Application Storage.
+
 ### 13. Micro-Frontends
 *   **Goal**: Splitting the UI into host and remote applications.
 *   **Tech**: `@originjs/vite-plugin-federation`.
