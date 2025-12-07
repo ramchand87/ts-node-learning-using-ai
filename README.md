@@ -240,3 +240,15 @@ Persist Redux state across page reloads using the `idb` library.
     *   [`react-ui/src/App.tsx`](react-ui/src/App.tsx)
     *   [`react-ui/src/store/slices/playgroundSlice.ts`](react-ui/src/store/slices/playgroundSlice.ts)
 
+### Step 17: Micro-Frontends
+Split the UI into a **Host** (`react-ui`) and **Remote** (`remote-app`) using Module Federation.
+*   **Documentation**: [MicroFrontend.md](MicroFrontend.md)
+*   **Key Concepts**: Host/Remote, Shared Dependencies (Singleton), Exposed Components.
+*   **How to Run**:
+    ```bash
+    # 1. Start Remote (Port 5001)
+    cd remote-app && npm run build && npm run preview -- --port 5001
+
+    # 2. Start Host (Port 5173)
+    cd react-ui && npm run dev
+    ```
