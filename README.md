@@ -24,8 +24,9 @@ This repository serves as a learning playground for mastering Node.js, TypeScrip
 
 ## Project Structure
 
-The project is organized into `src` containing various learning modules:
+The project is organized into `src`, `react-ui`, and `remote-app`:
 
+### Backend (NestJS & Node.js)
 *   `src/node_class_demo`: Basic Node.js class & module demo (CommonJS).
 *   `src/ts_class_demo`: Basic TypeScript class & module demo.
 *   `src/promise_demo`: Fundamental Promise concepts.
@@ -40,6 +41,16 @@ The project is organized into `src` containing various learning modules:
 *   `src/nestjs_config_demo`: Managing configurations with ConfigModule and .env.
 *   `src/nestjs_validation_demo`: Validating input using DTOs, pipes, and class-validator.
 *   `src/nestjs_exception_demo`: Global error handling using Exception Filters.
+
+### Frontend (React & Micro-Frontends)
+*   `react-ui`: **Host Application** (Vite + React + TS).
+    *   `src/api`: Axios client and API methods.
+    *   `src/db`: IndexedDB helper `idb` for persistence.
+    *   `src/store`: Redux Toolkit store and slices.
+    *   `src/pages`: Products, Playground, Home pages.
+    *   `src/remotes.d.ts`: TypeScript definitions for remote modules.
+*   `remote-app`: **Remote Application** (Vite + React + TS).
+    *   Exposes `ReviewHeader` component via Module Federation.
 
 ## Step-by-Step Learning Guide
 
